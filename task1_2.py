@@ -3,9 +3,8 @@
 import turtle as t
 from functions import getIntNumber, runTurtle
 
-side = getIntNumber('Введите ширину буквы')
-
-def func() -> None:
+@runTurtle
+def main(side):
     t.shape('turtle')
     t.forward(side)
     t.left(90)
@@ -17,4 +16,6 @@ def func() -> None:
     t.right(90)
     t.forward(side)
 
-runTurtle(func)
+side = getIntNumber('Введите ширину буквы:')
+
+main(side)

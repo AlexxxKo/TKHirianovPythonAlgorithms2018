@@ -3,7 +3,7 @@ import turtle as t
 def getIntNumber(question: str) -> int:
     while True:
         try:
-            n = int(input(f'{question}: '))
+            n = int(input(f'{question} '))
             break
         except ValueError:
             print('Нужно ввести целое число\n')
@@ -20,7 +20,10 @@ def getFloatNumber(question: str) -> int:
 
     return n
 
-def runTurtle(func) -> None:
-    t.speed(0)
-    func()
-    t.done()
+def runTurtle(func):
+    def wrapper(*args, **kwargs):
+        t.speed(0)
+        func(*args, **kwargs)
+        t.hideturtle()
+        t.done()
+    return wrapper

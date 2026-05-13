@@ -4,9 +4,8 @@ import turtle as t
 from functions import getFloatNumber, runTurtle
 from math import pi
 
-
-def run():
-    r = getFloatNumber('Введите радиус окружности')
+@runTurtle
+def main(r):
     l = 2 * pi * r
     n = 100
     angle = 360 / n
@@ -18,4 +17,7 @@ def run():
         t.forward(side)
         t.left(angle)
 
-runTurtle(run)
+
+r = getFloatNumber('Введите радиус окружности:')
+
+main(r)
