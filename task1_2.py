@@ -1,25 +1,20 @@
 # Нарисуйте букву S
 
 import turtle as t
+from functions import getIntNumber, runTurtle
 
-while True:
-    try:
-        side = int(input('Введите размер стороны буквы: '))
-        break
-    except ValueError:
-        print('Нужно ввести число\n')
+side = getIntNumber('Введите ширину буквы')
 
-t.speed(0)
+def func() -> None:
+    t.shape('turtle')
+    t.forward(side)
+    t.left(90)
+    t.forward(side)
+    t.left(90)
+    t.forward(side)
+    t.right(90)
+    t.forward(side)
+    t.right(90)
+    t.forward(side)
 
-t.shape('turtle')
-t.forward(side)
-t.left(90)
-t.forward(side)
-t.left(90)
-t.forward(side)
-t.right(90)
-t.forward(side)
-t.right(90)
-t.forward(side)
-
-t.done()
+runTurtle(func)
