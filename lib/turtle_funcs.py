@@ -13,7 +13,8 @@ def draw_square(side):
 
 
 def runTurtle(func):
-    def wrapper(*args, **kwargs):
+    def wrapper(*args, shape = None, **kwargs):
+        t.shape('turtle' if shape is None else shape)
         t.speed(0)
         func(*args, **kwargs)
         t.hideturtle()

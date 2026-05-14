@@ -11,7 +11,7 @@ def getIntNumber(question: str) -> int:
 def getFloatNumber(question: str) -> int:
     while True:
         try:
-            n = float(input(f'{question}: '))
+            n = float(input(f'{question} '))
             break
         except ValueError:
             print('Нужно ввести число\n')
