@@ -1,16 +1,16 @@
 # Нарисуйте n вложенных квадратов с шагом step.
 
 import turtle as t
-from functions import getIntNumber, runTurtle
+
+from lib.functions import getIntNumber
+from lib.turtle_funcs import runTurtle, draw_square
 
 @runTurtle
 def main(n, step):
     t.shape('turtle')
     side = 10;
     for i in range(n):
-        for _ in range(4):
-            t.forward(side)
-            t.left(90)
+        draw_square(side)
         t.penup()
         t.backward(step)
         t.right(90)

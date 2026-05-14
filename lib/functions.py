@@ -1,5 +1,3 @@
-import turtle as t
-
 def getIntNumber(question: str) -> int:
     while True:
         try:
@@ -20,10 +18,3 @@ def getFloatNumber(question: str) -> int:
 
     return n
 
-def runTurtle(func):
-    def wrapper(*args, **kwargs):
-        t.speed(0)
-        func(*args, **kwargs)
-        t.hideturtle()
-        t.done()
-    return wrapper

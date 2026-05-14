@@ -1,7 +1,9 @@
 # Нарисуйте букву S
 
 import turtle as t
-from functions import getIntNumber, runTurtle
+
+from lib.functions import getIntNumber
+from lib.turtle_funcs import runTurtle
 
 @runTurtle
 def main(side):

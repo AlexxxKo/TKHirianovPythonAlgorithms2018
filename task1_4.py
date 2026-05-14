@@ -1,8 +1,10 @@
 # Нарисуйте окружность, не используя circle()
 
 import turtle as t
-from functions import getFloatNumber, runTurtle
 from math import pi
+
+from lib.functions import getFloatNumber
+from lib.turtle_funcs import runTurtle
 
 @runTurtle
 def main(r):
